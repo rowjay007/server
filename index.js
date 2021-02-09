@@ -12,6 +12,9 @@ const morgan = require("morgan");
 const app = express();
 //App Setup
 
+app.use(morgan("combined"));
+app.use(bodyParser.json({ type: "*/*" }));
+
 //Server Setup
 
 const port = process.env.PORT || 3090;
