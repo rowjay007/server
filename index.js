@@ -4,6 +4,17 @@ const http = require("http");
 const bodyParser = require("body-parser");
 const morgan = require("morgan");
 const router = require("./router");
+const mongoose = require("mongoose");
+
+//DB Setup
+mongoose.connect("mongodb://localhost:auth/auth", {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
+// mongoose.connect("mongodb://localhost:auth/auth", {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true,
+// });
 
 // import express from "express";
 // import http from "http";
